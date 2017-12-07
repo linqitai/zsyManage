@@ -53,6 +53,7 @@ const Theme = (resolve) => {
   })
 }
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -61,6 +62,18 @@ export default new Router({
         {
           path: '/',
           component: Home  
+        },
+        {
+          path: '/merchantManage',
+          component: resolve => require(['pages/merchantManage/merchantManage'], resolve)
+        },
+        {
+          path: '/detail',
+          component: resolve => require(['pages/merchantManage/detail'], resolve)
+        },
+        {
+          path: '/experience',
+          component: resolve => require(['pages/merchantManage/experience'], resolve)
         }
       ]
     },

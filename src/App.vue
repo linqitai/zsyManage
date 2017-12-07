@@ -9,7 +9,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus" rel="stylesheet/stylus">
+@import "~common/stylus/variable"
 #app{
   position: fixed;
   left: 0;
@@ -19,5 +20,12 @@ export default {
 }
 .mu-checkbox-icon{
   margin-right: 5px !important;
+}
+
+.mu-menu-item{
+  padding: 0 16px !important;
+}
+.mu-menu-item-wrapper.active{
+  color: $color-theme
 }
 </style>

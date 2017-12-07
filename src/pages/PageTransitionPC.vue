@@ -2,7 +2,7 @@
   <div class="layout">
     <mu-paper class="header" :zDepth="1">
       <div class="logo">
-        臻收银后台管理系统1.0
+        <a href="/">臻收银后台管理系统1.0</a>
       </div>
       <div class="right">
         <i class="iconfont">&#xe600;</i>
@@ -36,6 +36,9 @@ export default {
     }
   },
   methods: {
+    toHome() {
+      this.$router.push('/')
+    }
   },
   components: {
     LeftMenu

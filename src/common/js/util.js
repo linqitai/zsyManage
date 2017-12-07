@@ -25,3 +25,7 @@ export function debounce(func, delay) {
     }, delay)
   }
 }
+
+export function openClose(value) {
+  return value === 1 ? '启用' : value === 0 ? '禁用' : '---'
+}

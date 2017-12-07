@@ -11,11 +11,11 @@
         <div class="subItems-wrapper">
           <transition name="fold">
             <div v-show="isShowItems1" class="subItems">
-              <mu-flat-button @click="selectItem($event, 1)">
+              <mu-flat-button @click="selectItem($event, 1)" to="/experience">
                 <items text="历程" ref="item11" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>
-              <mu-flat-button @click="selectItem($event, 2)">
+              <mu-flat-button @click="selectItem($event, 2)" to="/merchantManage">
                 <items text="商户管理" ref="item12" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>

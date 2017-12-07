@@ -18,6 +18,9 @@
     .logo
       font-size: $font-size-medium-x;
       display: inline-block;
+      cursor pointer
+      a
+        color white
     .right
       float right;
       font-size $font-size-medium
@@ -47,28 +50,84 @@
         flex 0 0 200px;
         background-color: $color-menu-background;
       .content-right
+        overflow auto
         position relative
         width 100%;
         flex 1;
         background-color: $color-background
         .breadcrumb
+          position absolute
+          top 0
+          left 0
+          right 0
           height $breadcrumb-height;
           line-height $breadcrumb-height;
-          padding: 0 $left;
           background-color $color-breadcrumb-background;
-          font-size $font-size-small;
+          font-size $font-size-medium-l;
           border-bottom 1px solid #efefef
+          font-weight normal
+          padding 0 $left
           .iconHome
             color $color-text-AD
             cursor pointer
             font-size $font-size-medium;
           .breadcrumbText
             color $color-text-AD
-            font-weight bold
           .breadcrumbTextCurrent
             color $color-theme
           .mu-breadcrumb-item-separator
             margin 0 0
+        .mu-dropDown-menu-text-overflow
+          text-align center
+        .mu-text-field
+          width auto
+          min-width auto
+        .right-page
+          position absolute
+          width 1400px
+          top $breadcrumb-height
+          bottom 0px
+          .searchBox
+            padding-top 10px
+            padding-left $left
+            padding-right $left
+            background-color $color-searchBox-background
+            margin-top $distance-top
+            .box
+              display inline-block
+              .boxlabel
+                float left
+                height 48px
+                line-height 48px
+                margin-right 6px
+              .marginRight
+                margin-right 6px
+              .normalWidth-m
+                width 100px;
+              .normalWidth
+                width 100px;
+              .normalWidth-l
+                width 120px;
+              .normalWidth-ll
+                width 140px;
+              .overflow
+                overflow hidden
+              .mu-flat-button
+                min-width 0
+              .btnWidthForMore
+                width 40px !important;
+              // .mu-text-field
+              //   width 120px
+            .boxpdl
+              margin-left 12px;
+            .verticalAlignBottom
+              vertical-align bottom
+          .tableWrapper
+            margin-top $distance-top
+            .paginationWrapper
+              margin-top $distance-top
+              padding $left
+              background-color $color-pagination-background
   .footer
     position absolute;
     left 0;
