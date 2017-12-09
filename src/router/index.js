@@ -74,6 +74,26 @@ export default new Router({
         {
           path: '/experience',
           component: resolve => require(['pages/merchantManage/experience'], resolve)
+        },
+        {
+          path: '/storeManage',
+          component: resolve => require(['pages/merchantManage/storeManage'], resolve)
+        },
+        {
+          path: '/operatorManage',
+          component: resolve => require(['pages/merchantManage/operatorManage'], resolve)
+        },
+        {
+          path: '/QRcode',
+          component: resolve => require(['pages/merchantManage/QRcode'], resolve)
+        },
+        {
+          path: '/agent',
+          component: resolve => require(['pages/agentManage/agent'], resolve)
+        },
+        {
+          path: '/bill',
+          component: resolve => require(['pages/financeManage/bill'], resolve)
         }
       ]
     },

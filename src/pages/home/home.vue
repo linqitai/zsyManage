@@ -15,7 +15,9 @@
       </mu-breadcrumb>
     </div>
     <div class="right-page">
-      首页内容暂时为空
+      <div class="rightContent">
+        首页内容暂时为空
+      </div>
     </div>
     <!-- <div id="myChart3" :style="{width: '300px', height: '300px'}"></div> -->
   </div>
@@ -62,12 +64,10 @@ export default {
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
 .home
-  wrapper()
-  .right-page
-    position absolute
-    left 0
-    right 0
-    top $breadcrumb-height
-    bottom 0px
-    padding $left
+  wrapperPage()
+  .rightContent
+    width 100%;
+    height 100%;
+    text-align center
+    line-height 500px
 </style>

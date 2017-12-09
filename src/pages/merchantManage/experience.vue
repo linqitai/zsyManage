@@ -50,8 +50,9 @@
         </div>
       </div>
       <div class="tableWrapper">
-        <el-table :data="tableData" stripe style="width: 1320px;margin-left:5px;"> <!-- 1170px -->
-          <el-table-column fixed prop="date" label="时间" width="230"></el-table-column>
+        <el-table :data="tableData" stripe style="width: 1320px;margin-left:5px;">
+          <!-- 1170px -->
+          <el-table-column prop="date" label="时间" width="230"></el-table-column>
           <el-table-column prop="name" label="姓名" width="150"></el-table-column>
           <el-table-column prop="name" label="账号" width="200"></el-table-column>
           <el-table-column prop="name" label="角色" width="150"></el-table-column>
@@ -69,6 +70,7 @@
 
 <script type="text/ecmascript-6">
 // import MHeader from 'components/m-header/m-header'
+import { resetSearchs } from 'common/js/util'
 export default {
   data() {
     return {
@@ -123,7 +125,7 @@ export default {
   },
   methods: {
     reset() {
-      console.log('reset')
+      resetSearchs(this.searchs)
     },
     searchEvent() {
       console.log('searchEvent')
@@ -147,6 +149,9 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus" rel="stylesheet/stylus">
-@import './experience';
+<style lang="stylus" rel="stylesheet/stylus">
+@import './experience'
+.el-table
+  td
+    padding 12px 0 !important
 </style>

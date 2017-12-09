@@ -19,15 +19,15 @@
                 <items text="商户管理" ref="item12" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>
-              <mu-flat-button @click="selectItem($event, 3)">
+              <mu-flat-button @click="selectItem($event, 3)" to="/storeManage">
                 <items text="门店管理" ref="item13" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>
-              <mu-flat-button @click="selectItem($event, 4)">
+              <mu-flat-button @click="selectItem($event, 4)" to="/operatorManage">
                 <items text="操作员管理" ref="item14" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>
-              <mu-flat-button @click="selectItem($event, 5)">
+              <mu-flat-button @click="selectItem($event, 5)" to="/QRcode">
                 <items text="立牌二维码" ref="item15" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>
@@ -45,7 +45,7 @@
         <div class="subItems-wrapper">
           <transition name="fold">
             <div v-show="isShowItems2" class="subItems">
-              <mu-flat-button @click="selectItem($event, 6)">
+              <mu-flat-button @click="selectItem($event, 6)" to="/agent">
                 <items text="代理商" ref="item21" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>
@@ -63,7 +63,7 @@
         <div class="subItems-wrapper">
           <transition name="fold">
             <div v-show="isShowItems3" class="subItems">
-              <mu-flat-button @click="selectItem($event, 7)">
+              <mu-flat-button @click="selectItem($event, 7)" to="/bill">
                 <items text="账单管理" ref="item31" :isShowRightIcon="b">
                 </items>
               </mu-flat-button>

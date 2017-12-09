@@ -1,5 +1,11 @@
-export const playMode = {
-  sequence: 0,
-  loop: 1,
-  random: 2
+export const searchs_storeManage = {
+  sName: '',
+  mName: '',
+  fzMan: '',
+  mobile: '',
+  address: {
+    province: '',
+    city: '',
+    area: ''
+  }
 }

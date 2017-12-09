@@ -50,11 +50,10 @@
         flex 0 0 200px;
         background-color: $color-menu-background;
       .content-right
-        overflow auto
         position relative
         width 100%;
         flex 1;
-        background-color: $color-background
+        overflow auto
         .breadcrumb
           position absolute
           top 0
@@ -84,10 +83,12 @@
           min-width auto
         .right-page
           position absolute
-          width 1400px
+          width 100%
+          min-width $min-width
           top $breadcrumb-height
           bottom 0px
           .searchBox
+            width 100%
             padding-top 10px
             padding-left $left
             padding-right $left
@@ -123,11 +124,17 @@
             .verticalAlignBottom
               vertical-align bottom
           .tableWrapper
+            overflow-x auto
             margin-top $distance-top
             .paginationWrapper
+              overflow hidden
               margin-top $distance-top
               padding $left
               background-color $color-pagination-background
+            .el-pagination
+              float left
+            .el-table td
+              padding 8px 0
   .footer
     position absolute;
     left 0;

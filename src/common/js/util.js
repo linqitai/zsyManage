@@ -1,31 +1,20 @@
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-export function shuffle(arr) {
-  let _arr = arr.slice()
-  for (let i = 0; i < _arr.length; i++) {
-    let j = getRandomInt(0, i)
-    let t = _arr[i]
-    _arr[i] = _arr[j]
-    _arr[j] = t
-  }
-  return _arr
-}
-
-export function debounce(func, delay) {
-  let timer
-
-  return function (...args) {
-    if (timer) {
-      clearTimeout(timer)
+export function resetSearchs(searchs) {
+  let _searchs = searchs
+  console.log('===before===')
+  console.log(_searchs)
+  for (let key in _searchs) {
+    console.log(_searchs[key])
+    let _KEY = 'address'
+    if (key === _KEY) {
+      console.log('find _KEY')
+      for (let keyToo in _searchs[_KEY]) {
+        _searchs[_KEY][keyToo] = ''
+      }
+    } else {
+      _searchs[key] = ''
     }
-    timer = setTimeout(() => {
-      func.apply(this, args)
-    }, delay)
   }
 }
-
 export function openClose(value) {
   return value === 1 ? '启用' : value === 0 ? '禁用' : '---'
 }
